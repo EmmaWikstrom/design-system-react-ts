@@ -12,28 +12,28 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    label: "Add task",
+    children: "Add task",
     variant: "primary",
   },
 };
 
 export const Neutral: Story = {
   args: {
-    label: "Add task",
+    children: "Add task",
     variant: "neutral",
   },
 };
 
 export const Subtle: Story = {
   args: {
-    label: "Add task",
+    children: "Add task",
     variant: "subtle",
   },
 };
 
 export const Disabled: Story = {
   args: {
-    label: "Add task",
+    children: "Add task",
     variant: "primary",
     disabled: true,
   },

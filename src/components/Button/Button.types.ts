@@ -1,7 +1,9 @@
+import type { ReactNode } from "react";
+
 export type ButtonVariant = "primary" | "neutral" | "subtle";
 
 export interface ButtonProps {
-  label: string;
+  children: ReactNode;
   variant?: ButtonVariant;
   disabled?: boolean;
   onClick?: () => void;

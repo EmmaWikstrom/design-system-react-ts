@@ -2,7 +2,7 @@ import styles from "./Button.module.css";
 import type { ButtonProps } from "./Button.types";
 
 export function Button({
-  label,
+  children,
   variant = "primary",
   disabled = false,
   onClick,
@@ -16,7 +16,7 @@ export function Button({
       onClick={onClick}
       type="button"
     >
-      {label}
+      {children}
     </button>
   );
 }
