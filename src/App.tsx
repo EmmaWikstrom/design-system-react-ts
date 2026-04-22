@@ -11,7 +11,7 @@ function App() {
         minHeight: "100vh",
       }}
     >
-      <Button label="Add task" />
+      <Button>Add task</Button>
     </div>
   );
 }

@@ -38,3 +38,17 @@ export const Disabled: Story = {
     disabled: true,
   },
 };
+
+export const Small: Story = {
+  args: {
+    children: "Add task",
+    size: "sm",
+  },
+};
+
+export const Large: Story = {
+  args: {
+    children: "Add task",
+    size: "lg",
+  },
+};
