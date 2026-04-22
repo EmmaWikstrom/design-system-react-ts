@@ -12,3 +12,23 @@ body,
 body {
     font-family: Arial, sans-serif;
 }
+
+:root {
+    /* colors */
+    --color-primary: #2f3e38;
+    --color-neutral: #e8e6e1;
+    --color-subtle: #f4f3f0;
+    --color-background: #ffffff;
+    --color-text-primary: #2f3e38;
+
+    /* spacing */
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+
+    /* radius */
+    --radius-md: 12px;
+
+    /* typography */
+    --font-size-md: 16px;
+    --font-weight-semibold: 600;
+}
