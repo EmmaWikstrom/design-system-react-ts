@@ -1,73 +1,134 @@
-# React + TypeScript + Vite
+# Design System Exploration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a personal learning space for exploring how to build a scalable design system with React and TypeScript.
 
-Currently, two official plugins are available:
+The goal is not just to make individual components look good, but to understand how a system grows in a structured way through reusable tokens, consistent styling, clear component APIs, documentation, and accessibility-minded decisions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Purpose
 
-## React Compiler
+This project is focused on learning how to:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- create reusable UI components
+- define and organize design tokens
+- connect design decisions to code in a consistent way
+- document components in Storybook
+- build a foundation that can scale over time
 
-## Expanding the ESLint configuration
+## Current Scope
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Right now the project includes:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- a token layer for colors, spacing, radius, borders, and typography
+- global styles in `src/styles/globals.css`
+- a `Button` component with variants and sizes
+- Storybook stories for component exploration and documentation
+- a Vite-based React + TypeScript development setup
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React
+- TypeScript
+- Vite
+- Storybook
+- CSS Modules
+- CSS custom properties
+- ESLint
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Start the local development app:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Start Storybook:
+
+```bash
+npm run storybook
+```
+
+Build the app:
+
+```bash
+npm run build
+```
+
+Build the Storybook site:
+
+```bash
+npm run build-storybook
+```
+
+Run linting:
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```text
+.
+├── .storybook/            # Storybook configuration
+├── src/
+│   ├── components/        # Reusable UI components
+│   ├── styles/            # Global styles and CSS variables
+│   ├── tokens/            # Design tokens in TypeScript
+│   ├── App.tsx            # Simple app sandbox
+│   └── main.tsx           # App entry point
+├── package.json
+└── README.md
+```
+
+## Component Status
+
+The first component in the system is `Button`.
+
+Current `Button` features:
+
+- variants: `primary`, `neutral`, `subtle`
+- sizes: `sm`, `md`, `lg`
+- disabled state
+- Storybook stories for common usage examples
+
+## Design System Approach
+
+This project is being built from the inside out:
+
+- tokens first, so visual decisions are reusable
+- components second, so UI patterns stay consistent
+- documentation alongside development, so the system stays understandable
+
+The system currently mixes TypeScript token files with CSS custom properties. That makes it easier to experiment while learning how to bridge design decisions between logic and styling.
+
+## Learning Goals
+
+This project is helping me explore questions like:
+
+- how should design tokens be structured?
+- when should styles live in CSS versus TypeScript?
+- what makes a component API scalable?
+- how can Storybook support documentation and testing?
+- how do accessibility and consistency shape component design?
+
+## Next Steps
+
+Likely next areas to expand:
+
+- add more foundational components such as `Input`, `Card`, and `Tag`
+- improve token coverage and naming consistency
+- strengthen accessibility patterns
+- add more Storybook docs and controls
+- introduce tests for components and behavior
+- define clearer conventions for scaling the system
+
+## Notes
+
+This is an exploration project, so the system is intentionally evolving. Some decisions may change as the architecture becomes clearer through experimentation and iteration.
