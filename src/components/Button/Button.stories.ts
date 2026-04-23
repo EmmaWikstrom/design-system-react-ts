@@ -52,3 +52,9 @@ export const Large: Story = {
     size: "lg",
   },
 };
+
+export const WithIcon: Story = {
+  args: {
+    children: "Add task ＋",
+  },
+};

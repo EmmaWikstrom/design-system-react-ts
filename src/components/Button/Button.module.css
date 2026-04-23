@@ -7,6 +7,9 @@
     font-family: Arial, sans-serif;
     cursor: pointer;
     transition: opacity 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
 
 .button:disabled {
