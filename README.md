@@ -20,7 +20,7 @@ Right now the project includes:
 
 - a token layer for colors, spacing, radius, borders, and typography
 - global styles in `src/styles/globals.css`
-- a `Button` component with variants and sizes
+- five components: `Button`, `Card`, `Checkbox`, `Input`, and `ListItem`
 - Storybook stories for component exploration and documentation
 - a Vite-based React + TypeScript development setup
 
@@ -89,14 +89,40 @@ npm run lint
 
 ## Component Status
 
-The first component in the system is `Button`.
-
-Current `Button` features:
+### Button
 
 - variants: `primary`, `neutral`, `subtle`
 - sizes: `sm`, `md`, `lg`
 - disabled state
+- `ariaLabel` prop for accessibility
 - Storybook stories for common usage examples
+
+### Card
+
+- container component that wraps any children content
+- Storybook stories
+
+### Checkbox
+
+- `label` and `checked` props
+- disabled state
+- checked state styles
+- `ariaLabel` prop for accessibility (falls back to `label`)
+- Storybook stories
+
+### Input
+
+- controlled text input with `value` and `onChange`
+- `placeholder` and `disabled` props
+- Storybook stories
+
+### ListItem
+
+- composes `Checkbox` and `Button` internally
+- `label` and `checked` props
+- `onToggle`, `onEdit`, and `onDelete` callbacks
+- `ariaLabel` on the internal checkbox
+- Storybook stories
 
 ## Design System Approach
 
@@ -120,14 +146,15 @@ This project is helping me explore questions like:
 
 ## Next Steps
 
-Likely next areas to expand:
+Given more time, four areas would be prioritised:
 
-- add more foundational components such as `Input`, `Card`, and `Tag`
-- improve token coverage and naming consistency
-- strengthen accessibility patterns
-- add more Storybook docs and controls
-- introduce tests for components and behavior
-- define clearer conventions for scaling the system
+**Feature-level components** — build `TaskList` and `ChecklistApp` that compose the design system primitives into a working product. This is where state management and business logic would be introduced, keeping that separation clean from the presentational layer below.
+
+**Expanded Storybook documentation** — add more realistic edge case stories, such as a `ListItem` with a very long task name or an empty `Card` state. Good Storybook documentation makes the design system genuinely useful for other developers.
+
+**Automated testing** — as the component library grows, manual Storybook verification becomes insufficient. Component tests would catch regressions early and make refactoring safer, especially for shared components like `Checkbox` and `Button`.
+
+**Dark mode** — implement using `@media (prefers-color-scheme: dark)`. The token system is already structured for this and would only require overriding CSS custom properties in a media query, without touching any component code. This is exactly the kind of scalability a well-designed token system enables.
 
 ## Notes
 
