@@ -1,0 +1,19 @@
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xs);
+    height: auto;
+    width: 100%;
+}
+
+.label {
+    flex: 1;
+    font-size: var(--font-size-md);
+    color: var(--color-text-primary);
+}
+
+.actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
