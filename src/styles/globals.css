@@ -15,22 +15,34 @@ body {
 
 :root {
     /* colors */
-    --color-primary: #2f3e38;
-    --color-neutral: #e8e6e1;
-    --color-subtle: #f4f3f0;
+    --color-primary: #2c2c2c;
+    --color-neutral: #e3e3e3;
+    --color-subtle: #ffffff;
     --color-background: #ffffff;
-    --color-text-primary: #2f3e38;
+    --color-accent: #5b4fcf;
+
+    /* text */
+    --color-text-primary: #000000;
+    --color-text-secondary: #757575;
+
+    /* borders */
+    --border-color-brand: #5b4fcf;
+    --border-color-neutral: #e3e3e3;
+    --border-color-tertiary: #e3e3e3;
 
     /* spacing */
+    --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 12px;
     --spacing-lg: 16px;
     --spacing-xl: 24px;
 
     /* radius */
-    --radius-md: 12px;
+    --radius-sm: 2px;
+    --radius-md: 8px;
 
     /* typography */
+    --font-size-sm: 14px;
     --font-size-md: 16px;
     --font-weight-semibold: 600;
 }
