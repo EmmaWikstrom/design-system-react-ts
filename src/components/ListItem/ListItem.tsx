@@ -12,7 +12,11 @@ export function ListItem({
 }: ListItemProps) {
   return (
     <div className={styles.listItem}>
-      <Checkbox checked={checked} onChange={onToggle} />
+      <Checkbox
+        checked={checked}
+        onChange={onToggle}
+        ariaLabel={`Mark "${label} as complete`}
+      />
       <span className={styles.label}>{label}</span>
       <div className={styles.actions}>
         <Button variant="neutral" size="sm" onClick={onEdit}>

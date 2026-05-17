@@ -6,6 +6,7 @@ export function Checkbox({
   checked = false,
   disabled = false,
   onChange,
+  ariaLabel,
 }: CheckboxProps) {
   return (
     <label
@@ -17,6 +18,7 @@ export function Checkbox({
         checked={checked}
         disabled={disabled}
         onChange={() => onChange?.()}
+        aria-label={ariaLabel ?? label}
       />
       <span>{label}</span>
     </label>

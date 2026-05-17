@@ -3,4 +3,5 @@ export interface CheckboxProps {
   checked?: boolean;
   disabled?: boolean;
   onChange?: () => void;
+  ariaLabel?: string;
 }

@@ -7,12 +7,14 @@ export function Button({
   size = "md",
   disabled = false,
   onClick,
+  ariaLabel,
 }: ButtonProps) {
   const variantClass = styles[variant];
   const sizeClass = styles[size];
 
   return (
     <button
+      aria-label={ariaLabel}
       className={`${styles.button} ${variantClass} ${sizeClass}`}
       disabled={disabled}
       onClick={onClick}
